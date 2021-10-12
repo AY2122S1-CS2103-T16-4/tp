@@ -22,7 +22,7 @@ public class MatchesKeywordsPredicate implements Predicate<Person> {
                 .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(person.getName().toString(), keyword)
                 || StringUtil.containsWordIgnoreCase(person.getPhone().toString(), keyword)
                 || StringUtil.containsWordIgnoreCase(person.getEmail().toString(), keyword)
-                /* || StringUtil.containsWordIgnoreCase(person.getTelegram().toString(), keyword) */);
+                || StringUtil.containsWordIgnoreCase(person.getTelegram().toString(), keyword));
     }
 
     @Override
