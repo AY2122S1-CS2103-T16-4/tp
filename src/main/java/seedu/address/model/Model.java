@@ -149,9 +149,6 @@ public interface Model {
     /**
      * Adds a person to a specified event. Since event name and name are unique, there should only be 1 event and
      * name matched.
-     * @throws PersonNotFoundException if {@code Person} does not exist in address book.
-     * @throws EventNotFoundException if {@code Event} does not exist in address book.
-     * @throws DuplicatePersonException if {@code Person} already exists in event.
      */
     void addPersonToEvent(NameEqualKeywordPredicate personPredicate, EventNameEqualKeywordPredicate eventPredicate);
 }
