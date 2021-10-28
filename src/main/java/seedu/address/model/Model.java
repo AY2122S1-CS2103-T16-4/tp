@@ -8,11 +8,8 @@ import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventNameEqualKeywordPredicate;
-import seedu.address.model.event.exceptions.EventNotFoundException;
 import seedu.address.model.person.NameEqualKeywordPredicate;
 import seedu.address.model.person.Person;
-import seedu.address.model.person.exceptions.DuplicatePersonException;
-import seedu.address.model.person.exceptions.PersonNotFoundException;
 
 /**
  * The API of the Model component.
