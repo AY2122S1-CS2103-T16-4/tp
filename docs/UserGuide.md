@@ -26,11 +26,11 @@ ForYourInterest is a **desktop app for managing members in university clubs/soci
 
    * **`list`** : View all members.
 
-   * **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to the Address Book.
+   * **`add`**`add n/Xiao Ming p/61234567 t/@xiao_ming e/xiaoming@gmail.com` : Adds a contact named `Xiao Ming` to the address book.
 
    * **`delete`**`3` : Deletes the 3rd contact shown in the current list.
 
-   * **`clear`**`ALL ENTRIES` : Deletes all contacts.
+   * **`clear`**`-p 1-10` : Deletes all entries in person list from index 1 to 10 inclusive.
 
    * **`exit`** : Exits the app.
 
@@ -214,15 +214,16 @@ Examples:
 
 ### Clearing all entries : `clear`
 
-Clears all entries from the address book.
+Clears entries from either the person list or the event list of the Interest Group.
 
-Format: `clear ALL ENTRIES`
+Format: `clear FLAG RANGE`
+* `FLAG` can either be `-p` for clearing the person list or `-e` for clearing the event list.
+* `RANGE` can either be `all` to clear out every entry in the list or a range in the format of `int-int`
+* `RANGE` must be a valid range for an existing list
 
 Examples:
-* `clear ALL ENTRIES` will output:
-  ```
-  All entries in the address book are deleted.
-  ```
+* `clear -p all`
+* `clear -e 1-10`
 
 ### Exiting the program : `exit`
 
@@ -294,7 +295,7 @@ Action | Format, Examples
 **Details** | `details NAME` or `details INDEX` <br> e.g., `details John Doe`
 **Event** | `event EVENT_NAME` <br> e.g., `event Dinner Event`
 **Add Person To Event** | `addPersonToEvent n/NAME ev/EVENT_NAME` <br> e.g., `addPersonToEvent n/John Doe ev/Dinner Event`
-**Clear** | `clear ALL ENTRIES`
+**Clear** | `clear FLAG RANGE` <br>e.g.,`clear -p 1-10`
 **Exit** | `exit`
 **&&** | `COMMAND && COMMAND` <br> e.g., `find Jon && delete 1`
 **Alias** | `alias a/ALIAS c/COMMAND` <br> e.g., `alias a/d1 c/details 1`

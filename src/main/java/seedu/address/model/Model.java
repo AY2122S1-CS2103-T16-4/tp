@@ -72,11 +72,6 @@ public interface Model {
     void deletePerson(Person target);
 
     /**
-     * Clears all entries from the address book.
-     */
-    void clearAllPerson();
-
-    /**
      * Adds the given person.
      * {@code person} must not already exist in the address book.
      */

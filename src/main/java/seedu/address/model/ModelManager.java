@@ -109,11 +109,6 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public void clearAllPerson() {
-        addressBook.clearAllPerson();
-    }
-
-    @Override
     public void addPerson(Person person) {
         addressBook.addPerson(person);
         updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);

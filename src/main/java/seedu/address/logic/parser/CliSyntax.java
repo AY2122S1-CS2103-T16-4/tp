@@ -14,6 +14,6 @@ public class CliSyntax {
     public static final Prefix PREFIX_TAG = new Prefix("tag/");
     public static final Prefix PREFIX_ALIAS = new Prefix("a/");
     public static final Prefix PREFIX_COMMAND = new Prefix("c/");
-    public static final Prefix PREFIX_EVENT_FLAG = new Prefix("-e");
-
+    public static final Prefix PREFIX_EVENT_FLAG = new Prefix("-e ");
+    public static final Prefix PREFIX_PERSON_FLAG = new Prefix("-p ");
 }

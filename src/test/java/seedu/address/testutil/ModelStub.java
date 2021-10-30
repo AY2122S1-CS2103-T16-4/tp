@@ -99,11 +99,6 @@ public class ModelStub implements Model {
     }
 
     @Override
-    public void clearAllPerson() {
-        throw new AssertionError("This method should not be called.");
-    }
-
-    @Override
     public boolean hasEvent(Event event) {
         throw new AssertionError("This method should not be called.");
     }
